@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
   devise_for :users
 
   devise_scope :user do
     # get '/users/sign_up' => 'devise/registrations#new'
 
   end
-  ActiveAdmin.routes(self)
   # Routes for the Trip resource:
   # CREATE
   get "/trips/new", :controller => "trips", :action => "new"
